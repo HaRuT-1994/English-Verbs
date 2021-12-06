@@ -1,0 +1,19 @@
+<h1>Irregular verbs</h1>
+
+<div class="timer">
+  <p>
+    {{time }} / 120
+  </p>
+</div>
+<div class="container" #drag>
+  <div class="dropzone" *ngFor="let verb of verbs; index as i" [ngStyle]="{'background-color': checkResult[i] ? 'green' : 'blueviolet'}">
+    <div class="draggable" draggable="true">
+        {{ verb }}
+    </div>
+  </div>
+
+  <button (click)="onCheckIrVerbs()">Check</button>
+  <button (click)="onResetIrVerbs()">Reset</button>
+</div>
+
+
